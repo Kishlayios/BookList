@@ -32,6 +32,7 @@
 		5F9F60B82B905F6300CE31BD /* DisplayAuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F60B62B905F6300CE31BD /* DisplayAuthorCell.swift */; };
 		5F9F60B92B905F6300CE31BD /* DisplayAuthorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9F60B72B905F6300CE31BD /* DisplayAuthorCell.xib */; };
 		5FB11B392B906E2600561571 /* CustomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB11B382B906E2600561571 /* CustomExtensions.swift */; };
+		5FEFCD612B9073A300012334 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5FEFCD602B9073A300012334 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FEFCD612B9073A300012334 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +305,9 @@
 			dependencies = (
 			);
 			name = BookList;
+			packageProductDependencies = (
+				5FEFCD602B9073A300012334 /* SDWebImage */,
+			);
 			productName = BookList;
 			productReference = 5F9F605A2B904F5700CE31BD /* BookList.app */;
 			productType = "com.apple.product-type.application";
@@ -375,6 +380,9 @@
 				Base,
 			);
 			mainGroup = 5F9F60512B904F5700CE31BD;
+			packageReferences = (
+				5FEFCD5F2B9073A300012334 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 5F9F605B2B904F5700CE31BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -785,6 +793,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5FEFCD5F2B9073A300012334 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FEFCD602B9073A300012334 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FEFCD5F2B9073A300012334 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F9F60522B904F5700CE31BD /* Project object */;
 }
