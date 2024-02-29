@@ -28,6 +28,37 @@ extension UIView {
 
 extension UIViewController {
     
+    public func setNavigationBarImage(for image: UIImage? = nil, color: UIColor = .white) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.shadowImage = image
+            appearance.shadowColor = .clear
+            appearance.backgroundColor = color
+            appearance.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .medium), NSAttributedString.Key.foregroundColor: UIColor(named: "Gray 600") ?? #colorLiteral(red: 0.1153265014, green: 0.228017509, blue: 0.3751957119, alpha: 1)]
+            self.navigationController?.navigationBar.standardAppearance = appearance
+            if #available(iOS 15, *) {
+                self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            }
+        
+    }
+    
+    /// MARK: BackButton
+    public func setBackButton(tintColor: UIColor = .white, _ image: UIImage = UIImage(named: "ic_BackSvg")! ) {
+        let btn1 = UIButton(type: .custom)
+        btn1.setImage(image, for: .normal)
+        btn1.imageView?.contentMode = .scaleAspectFit
+        btn1.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+        btn1.contentHorizontalAlignment = .left
+        btn1.setTitleColor(tintColor, for: .normal)
+        btn1.addTarget(self, action: #selector(self.backBtnTapAction), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: btn1)
+        let negativeSpacer:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        negativeSpacer.width = -16
+        self.navigationItem.leftBarButtonItems = [negativeSpacer, item1]
+    }
+    
+    @objc func backBtnTapAction(){}
+    
     /// Function To Setup The Right Button Search
     func setupRightSearchNavItem() {
         let btn1 = UIButton(type: .custom)

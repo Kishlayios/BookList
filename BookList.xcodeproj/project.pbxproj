@@ -629,6 +629,7 @@
 				DEVELOPMENT_TEAM = A84SKZTH9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BookList/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -658,6 +659,7 @@
 				DEVELOPMENT_TEAM = A84SKZTH9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BookList/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -49,7 +49,7 @@ class ServiceManager {
         
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = 5.0
-        sessionConfig.timeoutIntervalForResource = 30.0
+        sessionConfig.timeoutIntervalForResource = 20.0
         sessionConfig.waitsForConnectivity = true
         let session = URLSession(configuration: sessionConfig)
         

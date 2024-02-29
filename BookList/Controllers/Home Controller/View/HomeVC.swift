@@ -90,14 +90,17 @@ extension HomeVC: UICollectionViewDelegate {
 extension HomeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == (self.homeViewModel?.arrFilteredAuthorList.count ?? 0) - 1 {
+        if indexPath.row == (self.homeViewModel?.arrFilteredAuthorList.count ?? 0) - 1 && !isSearchBtnEnabled {
             self.homeViewModel?.pageCount += 1
             self.homeViewModel?.getTheAuthorList()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //code
+        let data = self.homeViewModel?.arrFilteredAuthorList[indexPath.row]
+        guard let vc = StoryBoard.Main.instantiateViewController(withIdentifier: "BookDetailsVC") as? BookDetailsVC else {return}
+        vc.receivedAuthorData = data
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
