@@ -14,7 +14,6 @@ class HomeVC: UIViewController {
     @IBOutlet weak var noDataView: UIView!
     
     // MARK: - Variables
-    var refreshControl = UIRefreshControl()
     private var homeViewModel: HomeListViewModel?
     private lazy var searchBar: UISearchBar = {
         let search = UISearchBar()

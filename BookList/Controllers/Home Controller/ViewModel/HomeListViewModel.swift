@@ -29,7 +29,7 @@ class HomeListViewModel: NSObject {
 // MARK: - Get The Author List From Server
 extension HomeListViewModel {
     
-    func getTheAuthorList(isfromRefresh: Bool = false) {
+    func getTheAuthorList() {
         webService.getTheBookListFromServer(pageNo: self.pageCount) { result in
             if result?.response != nil {
                 do {
